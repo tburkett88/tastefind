@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <div class="container">
-      <div class="row padding-inside-top-md">
 
-          <div class="col-md-offset-2 col-md-2">
-            <h4>Restaurant Name</h4>
-          </div>
+<div class="container col-md-offset-1 col-md-9">
+  <table class="table table-hover">
+    <thead>
+        <tr>
+         <th class="col-md-4">Restaurant</th>
+         <th class="col-md-1">Rating</th>
+         <th class="col-md-2">Basic Info</th>
+         <th class="col-md-2">Address/map</th>
+       </tr>
+    </thead>
 
-          <div class="col-md-2">
-            <h4>Rating </h4>
-          </div>
+    <tbody>
+        <% @ratings.each do |rating| %>
+        <tr>
+          <td><%= rating.restid %></td>
+          <td><%= rating.rating %></td>
+          <td> Basic Info</td>
+          <td> Address/map</td>
+        </tr>
+        <% end %>
 
-          <div class="col-md-2">
-            <h4>Basic info $$</h4>
-          </div>
+    </tbody>
+  </table>
 
-          <div class="col-md-2">
-            <h4>Address/map</h4>
-          </div>
-
-      </div>
-
-      <div class="row col-md-12  inside-padding-top-sm">
-          <h3 class="text-center">Placeholder - will populated restaurants that user has rated
-          </h3>
-      </div>
-
-
-  </div>
+</div>
 
   <div class="container">
     <div class="row padding-inside-top-md">

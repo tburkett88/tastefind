@@ -9,7 +9,8 @@ class RestaurantsController < ApplicationController
   def signup
   end
 
-  def restaurant
+  def restaurants
+    @ratings = Rating.all
   end
 
 end
