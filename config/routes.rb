@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 #login
+  get("/login", {:controller => "restaurants", :action => "login"})
   get("/signup", {:controller => "restaurants", :action => "signup"})
 
 #mainuserpage
@@ -11,6 +12,12 @@ Rails.application.routes.draw do
 
 #recommendation page
   get("/recs", {:controller => "restaurants", :action => "recs"})
+
+#add resturant rating page
+  get("/add_restaurant", {:controller => "restaurants", :action => "add_restaurant"})
+
+#delete resturant rating page
+  get("/delete_rating/:id", {:controller => "restaurants", :action => "delete_rating"})
 
 #homepage
   get("/", {:controller => "restaurants", :action => "index"})
